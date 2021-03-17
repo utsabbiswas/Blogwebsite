@@ -1,0 +1,9 @@
+<%- include("partials/header") %> 
+<h1>Home</h1>
+<p><%=HomeText%> </p>
+<%received.forEach(element => {%>
+<h1><%=element.title%></h1>
+<p><%=(element.blog).slice(0,80)+"..."%></p>
+<p><a href="<%="/posts/"+element.title %> ">Read More</a></p>
+<%});%>
+<%- include("partials/footer") %> 
